@@ -114,7 +114,7 @@ pheatmap::pheatmap(binaryActPerc_subset,fontsize_row=10,
 topRegulators <- reshape2::melt(regulonActivity_byCellType_Binarized)
 colnames(topRegulators) <- c("Regulon", "CellType", "RelativeActivity")
 topRegulators <- topRegulators[which(topRegulators$RelativeActivity>minPerc),]
-write.table(topRegulators, file = "regulonActivityBinary_byCellType_0.7.xls", sep = "\t", eol = "\n", row.names = F, col.names = T, quote = F);
+write.table(topRegulators, file = "regulonActivityBinary_byCellType_0.5.xls", sep = "\t", eol = "\n", row.names = F, col.names = T, quote = F);
 
 # Export to loom/SCope
 scenicOptions@fileNames$output["loomFile",] <- "output/P27_SCENIC.loom"
